@@ -39,35 +39,35 @@ An identifier of the subject who carried out the experiment.
 
 ##Columnn Names:
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+1. tBodyAcc-XYZ
+2. tGravityAcc-XYZ
+3. tBodyAccJerk-XYZ
+4. tBodyGyro-XYZ
+5. tBodyGyroJerk-XYZ
+6. tBodyAccMag
+7. tGravityAccMag
+8. tBodyAccJerkMag
+9. tBodyGyroMag
+10. tBodyGyroJerkMag
+11. fBodyAcc-XYZ
+12. fBodyAccJerk-XYZ
+13. fBodyGyro-XYZ
+14. fBodyAccMag
+15. fBodyAccJerkMag
+16. fBodyGyroMag
+17. fBodyGyroJerkMag
 
 
 The set of variables that were estimated (and kept for this assignment) from these signals are:
 
-mean(): Mean value
-std(): Standard deviation
+1. mean(): Mean value
+2. std(): Standard deviation
 
 
 Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 
-gravityMean
-tBodyAccMean
-tBodyAccJerkMean
-tBodyGyroMean
-tBodyGyroJerkMean
+1. gravityMean
+2. tBodyAccMean
+3. tBodyAccJerkMean
+4. tBodyGyroMean
+5. tBodyGyroJerkMean
