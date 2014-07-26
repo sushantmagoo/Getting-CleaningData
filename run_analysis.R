@@ -1,5 +1,5 @@
 
-# Getting and Cleaning Data Course Project
+# Getting and Cleaning Data
 
 
 
@@ -8,6 +8,8 @@
 
 #get column names from second row of feature file
  colname <- features[, 2]
+
+
 
 #read the xTest file
  xTest <- read.table("test/X_test.txt", col.names=colname)
@@ -20,6 +22,7 @@
 
 #binding them column wise
  testData <- cbind(subTest, yTest, xTest)
+
 
 
 #read the xTrain file
@@ -35,11 +38,13 @@
  trainData <- cbind(subTrain, yTrain, xTrain)
 
 
-#binding test & train data row wisw
+
+#binding test & train data row wise
  fullData <- rbind(testData, trainData)
 
 
-#only mean, std, subject, activity will be included
+
+#only "mean", "std", "subject", "activity" columns will be included
  columnIncluded <- "mean|std|subject|activity"
 
  cleanData <- fullData[, grep(columnIncluded, names(fullData))]
@@ -49,7 +54,9 @@
 
  names(cleanData) <- cleanName
 
+#write this into a new file (now this is clean & tidy data)
  write.table(cleanData, "cleanData.txt", sep="\t")
+
 
 
 #import plyr library
@@ -58,6 +65,6 @@
 #average of subject & activity
  average<-ddply(cleanData, .(subject ,activity), numcolwise(mean))
 
-#write this into a new file
+#write this into a second file (now this file has average of each variable for each activity and each subject)
  write.table(average, "average.txt", sep="\t")
 
